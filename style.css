@@ -1,0 +1,142 @@
+#clockBlock{
+    color: rgb(255, 255, 255);
+    font-size: 160px;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
+    animation: glow 2s ease-in-out infinite;
+    
+}
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+body {
+  background: linear-gradient(270deg, #0f2027, #203a43, #2c5364, #1a1a2e, #16213e, #0f0c29);
+  background-size: 800% 800%;
+  animation: gradientMove 10s ease infinite;
+  color: white;
+  overflow: hidden;
+}
+.shapka{
+    position: absolute;
+}
+.hat {
+  width: 105px; 
+  margin-left:643px ;       
+  height: auto;        
+  position: absolute;  
+  top: 337px;         
+  left: 50%;           
+
+}
+.elka{
+    position: absolute;   
+}
+.elk{
+  width: 117px; 
+  margin-left:1116px ;      
+  height: auto;       
+  position: absolute;  
+  top: 330px;       
+  left: 50%; 
+}
+.p1{
+    position: absolute;
+}
+.p2{
+    position: absolute;
+}
+.podarok1{
+  width: 80px; 
+  margin-left:653px ;       
+  height: auto;        
+  position: absolute;  
+  top: 438px;         
+  left: 50%; 
+}
+.podarok2{
+ width: 70px; 
+  margin-left:1138px ;      
+  height: auto;       
+  position: absolute;  
+ top: 440px;          
+  left: 50%; 
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff; }
+  50% { text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 80px #00ffff; }
+}
+#snow {
+  pointer-events: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  overflow: hidden;
+}
+#snow::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image:
+    radial-gradient(white 2.5px, transparent 3px),
+    radial-gradient(white 2px, transparent 3px);
+  background-size: 100px 100px, 120px 120px;
+  background-position: 20% 0, 80% -40px;
+  animation: fall1 20s linear infinite, sway1 10s ease-in-out infinite;
+  opacity: 0.7;
+}
+
+#snow::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image:
+    radial-gradient(white 1.8px, transparent 2.8px);
+  background-size: 140px 140px;
+  background-position: 50% -70px;
+  animation: fall2 25s linear infinite, sway2 12s ease-in-out infinite;
+  opacity: 0.5;
+}
+
+@keyframes fall1 {
+  0% { background-position: 20% -100px, 80% -140px; }
+  100% { background-position: 20% 100vh, 80% 100vh; }
+}
+
+@keyframes fall2 {
+  0% { background-position: 50% -160px; }
+  100% { background-position: 50% 100vh; }
+}
+
+@keyframes sway1 {
+  0%, 100% { background-position-x: 20%, 80%; }
+  50% { background-position-x: 25%, 75%; }
+}
+
+@keyframes sway2 {
+  0%, 100% { background-position-x: 50%; }
+  50% { background-position-x: 55%; }
+}
+
+
+
+
+
